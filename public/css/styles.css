@@ -1,0 +1,569 @@
+body{
+background-color: #F6AE2D;
+display: flex;
+align-items:center;
+justify-content:center;
+flex-direction: column;
+padding-top: 30px;
+}
+
+h2{
+font-size: 50px;
+font-family: 'Courier New', Courier, monospace;
+margin-bottom: -5px;
+}
+
+.Start-Form-Container{
+width:600px;
+height:400px;
+font-family: 'Courier New', Courier, monospace;
+padding: 10px 30px;
+background-color: white;
+display: flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+gap: 8px;
+}
+
+.Start-Form-Container> p{
+font-size: 20px;
+}
+
+.button1{
+background-color:#F26419;
+border-color: white;
+width:400px;
+height:30px;
+font-size: 18px;
+color: white;
+}
+
+.button2{
+background-color:#6D676E;
+border-color: white;
+width:400px;
+height:30px;
+font-size: 18px;
+color: white;
+}
+
+.Register-Form-Container{
+width:400px;
+height:670px;
+padding: 10px 30px;
+font-family: 'Courier New', Courier, monospace;
+background-color: white;
+display: flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+gap: 8px;
+}
+
+input{
+width: 400px;
+}
+
+::placeholder {
+color: grey;
+}
+
+.Register-Form-Container> h3{
+font-size: 40px;
+margin-top: -5x;
+}
+
+#Register{
+padding-left: 20px;
+margin-top: -20px;
+}
+
+.button3{
+background-color:#F26419;
+border-color: white;
+width:200px;
+height:30px;
+font-size: 16px;
+margin-top: 10px;
+color: white;
+}
+
+.Login-Form-Container{
+width:400px;
+height:600px;
+padding: 10px 30px;
+font-family: 'Courier New', Courier, monospace;
+background-color: white;
+display: flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+gap: 8px;
+}
+
+.Login-Form-Container> h3{
+font-size: 30px;
+}
+
+#Login{
+font-size: 50px;
+margin-top: -30px;
+}
+
+.button4{
+background-color: #707070;
+border-color: white;
+width:200px;
+height:30px;
+font-size: 16px;
+margin-top: 10px;
+color: white;
+}
+
+.Homepage-Container{
+background-color: #FFD993;
+margin-top: 20px;
+width:1000px;
+height:500px;
+border-radius:25px;
+display: flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+}
+
+.Homepage-Container>h3{
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+font-size: 60px;
+margin-top: 50px;
+}
+
+.Counter-Container{
+background-color: #3FA347;
+outline: #000 solid 5px;
+margin-top: 100px;
+width:150px;
+height:60px;
+border-radius:50px;
+}
+
+.Counter-Container>h2{
+position: absolute;
+top:100px;
+padding-left: 27px;
+color:white;
+}
+
+.Counter-Container>h3{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 30px;
+position: absolute;
+top:63px;
+padding-left: 30px;
+color:white;
+}
+
+.Habit-1{
+    width:900px;
+    height:60px;
+    border-radius: 30px;
+    background-color: white;
+    margin-bottom: 20px;
+    /* top:320px; 
+    position:absolute; */
+}
+
+
+#CheckMark1{
+    font-size: 50px;
+    color: black;
+    position:relative;
+    padding-top: 100px;
+    text-align: center;
+}
+
+li span{
+    position:relative;
+    left: -60px;
+    margin-top: 15px;
+
+}
+
+
+.fa-check{
+font-size: 50px;
+position:relative;
+top:-0px; 
+left:2px
+}
+
+.Habit-1>p{
+    font-size: 55px;
+    position:relative;
+    bottom:120px;
+    left:110px;
+    color: red;
+}
+
+.fa-xmark{
+font-size: 70px;
+position:relative; 
+bottom:250px;
+left:780px;
+}
+
+
+
+
+
+#PlusButton{
+position: relative;
+left: 460px;
+bottom: 15px;
+background-color: green;
+width:50px;
+height:60px;
+border-radius: 50%;
+font-size: 30px;
+color:white;
+}
+
+.fa-plus{
+font-size: 30px !important;
+padding-bottom: 2px;
+}
+
+.button6{
+position: relative;
+background-color:#F26419;
+color: white;
+right: 460px;
+bottom: 55px;
+width:50px;
+height:60px;
+font-size: 30px;
+}
+
+.button9{
+position: relative;
+left: 365px;
+bottom: -20px;
+width:200px;
+height:50px;
+font-size: 20px;
+background-color: #707070;
+color: white;
+} 
+
+h5{
+padding-top: 30px;
+font-family: Arial, Helvetica, sans-serif;
+position: absolute;
+top: 8px;
+left: 16px;
+font-size: 35px;
+
+}
+
+#Logo1{
+position:absolute;
+top:8px;
+left:180px;
+padding-top: 30px;
+}
+
+.button7{
+background-color: #707070;
+color: white;
+position: absolute;
+top: 60px;
+right: 10px;
+width:115px;
+height:40px;    
+}
+
+h6{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px !important;
+position: absolute; 
+top: 25px;
+right: 13px;
+}
+
+#myDate{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+text-align: center;
+background-color: #FFD993;
+border-color: #F6AE2D;
+width: 200px;
+height: 40px;
+border-radius: 20px;
+position: absolute;
+top: 57px;
+right: 140px;
+}
+
+#modal1{
+    background-color: #F6AE2D;
+    border-radius: 50px;
+}
+
+
+h4{
+text-align: center;
+color: white;
+}
+
+span{
+    color: black;
+    font-size: 50px;
+}
+
+.HabitPriority-Container{
+gap: 40px;
+}
+
+
+.button8{
+width:750px;
+ height:100px;
+ border-radius: 30px;
+}
+
+
+
+/* Setting Media Elements for 600px width */
+@media only screen and (max-width: 420px) {
+h2{
+font-size: 35px;
+font-family: 'Courier New', Courier, monospace;
+margin-bottom: -5px;
+}
+
+.Start-Form-Container{
+width:300px;
+height:400px;
+font-family: 'Courier New', Courier, monospace;
+padding: 10px 30px;
+background-color: white;
+display: flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+gap: 8px;
+}
+
+.Start-Form-Container> p{
+font-size: 15px;
+}
+
+.button1{
+background-color:#F26419;
+border-color: white;
+width:300px;
+height:25px;
+font-size: 18px;
+color: white;
+}
+    
+.button2{
+background-color:#6D676E;
+border-color: white;
+width:300px;
+height:25px;
+font-size: 18px;
+color: white;
+}
+
+.Register-Form-Container{
+width:325px;
+height:670px;
+padding: 10px 30px;
+font-family: 'Courier New', Courier, monospace;
+background-color: white;
+display: flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+gap: 8px;
+}
+    
+input{
+width: 325px;
+}
+    
+::placeholder {
+color: grey;
+}
+    
+.Register-Form-Container> h3{
+font-size: 30px;
+margin-top: -5x;
+}
+    
+#Register{
+padding-left: 20px;
+margin-top: -20px;
+}
+    
+.button3{
+background-color:#F26419;
+border-color: white;
+width:200px;
+height:30px;
+font-size: 16px;
+margin-top: 20px;
+color: white;
+}
+
+.Login-Form-Container{
+width:325px;
+height:600px;
+padding: 10px 30px;
+font-family: 'Courier New', Courier, monospace;
+background-color: white;
+display: flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+gap: 8px;
+}
+    
+.Login-Form-Container> h3{
+font-size: 45px
+}
+
+.Login-Form-Container>p{
+font-size: 100px !important;
+}
+    
+#Login{
+font-size: 50px;
+margin-top: -30px;
+}
+    
+.button4{
+background-color: #707070;
+border-color: white;
+width:200px;
+height:30px;
+font-size: 16px;
+margin-top: 10px;
+color: white;
+}
+
+
+.Homepage-Container{
+background-color: #FFD993;
+margin-top: 100px;
+width:400px;
+height:800px;
+ border-radius:25px;
+ display: flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+}
+    
+.Homepage-Container>h3{
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+font-size: 40px;
+margin-bottom: 640px;
+text-align: center;
+}
+    
+.Counter-Container{
+background-color: #3FA347;
+outline: #000 solid 5px;
+margin-top: 100px;
+width:150px;
+height:60px;
+border-radius:50px;
+}
+    
+.Counter-Container>h2{
+position: absolute;
+top:100px;
+padding-left: 27px;
+color:white;
+font-size:50px;
+}
+    
+.Counter-Container>h3{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 30px;
+position: absolute;
+top:63px;
+padding-left: 30px;
+color:white;
+}
+    
+.button5{
+margin-left: 320px;
+margin-bottom: -40px;
+background-color: green;
+width:50px;
+height:60px;
+border-radius: 50%;
+font-size: 30px;
+color:white;
+}
+    
+.button6{
+width:50px;
+height:60px;
+font-size: 30px;
+margin-right: 320px;
+margin-bottom: 30px;
+}
+    
+h5{
+font-family: Arial, Helvetica, sans-serif;
+position: absolute;
+top: 15px;
+left: 3px;
+font-size: 15px;
+}
+    
+#Logo1{
+position:absolute;
+top:15px;
+left:100px;
+}
+    
+.button7{
+background-color: #707070;
+color: white;
+position: absolute;
+top: 30px;
+right: 3px;
+width:80px;
+height:40px;    
+}
+    
+h6{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 9px;
+position: absolute;
+top: -3px;
+right: 4.5px;
+}
+    
+#myDate{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+background-color: #FFD993;
+border-color: #F6AE2D;
+width: 250px;
+height: 40px;
+border-radius: 20px;
+position: absolute;
+top: 230px;
+right: 80px;
+}
+    
+}

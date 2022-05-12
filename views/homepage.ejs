@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<script src="https://kit.fontawesome.com/fa76d837d2.js" crossorigin="anonymous"></script>
+<body>
+    <h5><b>Habit Tracker</b></h5>
+
+    <div id="Logo1">
+        <img src="img/calendar.png" alt="Habit Tracker Logo" height="60" width="60"/>
+       </div>
+
+     <input type="date" id="myDate" value="2022-04-26">
+    
+     <div class="Counter-Container">
+         <h3><b>Today</b></h3>
+        <h2>0|0</h2>
+     </div>
+    <div class="Homepage-Container">
+        <h3><b>Start with a new habit today!</b></h3>
+        <form action="#">
+
+        <ul>
+          <li class="Habit-1"> 
+          
+          <label>
+            <input type="checkbox" class="filled-in"  id="CheckMark1" />
+            <span style="font-size:50px"></spanstyle> <b>Reading</b> </span> 
+          </label>
+        
+        <p><b>15</b></p>
+        <i class="fa-solid fa-xmark"></i>
+         </li>
+      
+          
+          <li class="Habit-1"> 
+            
+              <label>
+                <input type="checkbox" class="filled-in"  id="CheckMark1" />
+                <span style="font-size:50px"></spanstyle> <b>Cooking</b> </span> 
+              </label>
+            
+          <p><b>10</b></p>
+          <i class="fa-solid fa-xmark"></i>
+          </li>
+
+          <li class="Habit-1"> 
+            
+              <label>
+                <input type="checkbox" class="filled-in"  id="CheckMark1" />
+                <span style="font-size:50px"></spanstyle> <b>Jogging</b></span> 
+              </label>
+            
+          <p><b>10</b></p>
+          <i class="fa-solid fa-xmark"></i>
+          </li>
+
+          <li class="Habit-1">  
+            
+              <label>
+                <input type="checkbox" class="filled-in"  id="CheckMark1" />
+                <span style="font-size:50px"></spanstyle> <b>Cleaning</b></span> 
+              </label>
+            
+          <p><b>10</b></p>
+          <i class="fa-solid fa-xmark"></i>
+          </li>
+        </ul>
+        <input type="submit"  class="button button9" value="Submit">
+      </form>
+        <button id="PlusButton" data-target="modal1" class="btn modal-trigger"> <i class="fa-light fa-plus"></i></button>
+        <button class="button6"><i class="fa-solid fa-chart-column"></i></button>
+    </div>
+      <h6><b>Welcome Mahinya</b></h6>
+    <a href="/logout"><button class="button button7">Logout <i class="fa fa-sign-out"></i></button></a>
+
+    <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4><b>Add Habit!</b></h4>
+      <select class="browser-default">
+        <option value="" disabled selected>Choose your Habits!</option>
+       <% for (i=0;i<habits.length;i++){  %>
+          <option value="<%= habits[i]._id %>"> <%= habits[i].habit %> </option>
+        <% }; %>
+       
+      </select>
+
+      <br>
+      <p>Select your Habit priority:</p>
+      <div class=" HabitPriority-Container">
+        
+        <% for (i=0;i<priorities.length;i++){  %>
+        <p>
+          <label>
+            <input name="group1" type="radio" value="<% priorities[i]._id %>" />
+            <span><%= priorities[i].priority %> </span>
+          </label>
+        </p>
+        <% }; %>
+      </div>
+        <input type="submit"  class="button button8" value="ADD">
+      </form>
+    </div>
+  </div>
+ <!-- Modal Trigger -->
+ <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const box= document.querySelector(".modal")
+    M.Modal.init(box,{});
+  });
+  </script>
+
+</body>
+</html>
