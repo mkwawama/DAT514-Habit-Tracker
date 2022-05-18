@@ -166,28 +166,28 @@ color:white;
 }
 
 .Habit-1{
-    width:900px;
-    height:60px;
-    border-radius: 30px;
-    background-color: white;
-    margin-bottom: 20px;
-    /* top:320px; 
-    position:absolute; */
+width:900px;
+height:60px;
+border-radius: 30px;
+background-color: white;
+margin-bottom: 20px;
+/* top:320px; 
+position:absolute; */
 }
 
 
 #CheckMark1{
-    font-size: 50px;
-    color: black;
-    position:relative;
-    padding-top: 100px;
-    text-align: center;
+font-size: 50px;
+color: black;
+position:relative;
+padding-top: 100px;
+text-align: center;
 }
 
 li span{
-    position:relative;
-    left: -60px;
-    margin-top: 15px;
+position:relative;
+left: -60px;
+margin-top: 15px;
 
 }
 
@@ -200,11 +200,11 @@ left:2px
 }
 
 .Habit-1>p{
-    font-size: 55px;
-    position:relative;
-    bottom:120px;
-    left:110px;
-    color: red;
+font-size: 55px;
+position:relative;
+bottom:120px;
+left:110px;
+color: red;
 }
 
 .fa-xmark{
@@ -264,7 +264,6 @@ position: absolute;
 top: 8px;
 left: 16px;
 font-size: 35px;
-
 }
 
 #Logo1{
@@ -278,7 +277,7 @@ padding-top: 30px;
 background-color: #707070;
 color: white;
 position: absolute;
-top: 60px;
+top: 30px;
 right: 10px;
 width:115px;
 height:40px;    
@@ -307,8 +306,8 @@ right: 140px;
 }
 
 #modal1{
-    background-color: #F6AE2D;
-    border-radius: 50px;
+background-color: #F6AE2D;
+border-radius: 50px;
 }
 
 
@@ -318,8 +317,8 @@ color: white;
 }
 
 span{
-    color: black;
-    font-size: 50px;
+color: black;
+font-size: 50px;
 }
 
 .HabitPriority-Container{
@@ -329,18 +328,18 @@ gap: 40px;
 
 .button8{
 width:750px;
- height:100px;
- border-radius: 30px;
+height:100px;
+border-radius: 30px;
 }
 
 
 
-/* Setting Media Elements for 600px width */
+/* Setting Media Elements for 420px width */
 @media only screen and (max-width: 420px) {
+
 h2{
 font-size: 35px;
 font-family: 'Courier New', Courier, monospace;
-margin-bottom: -5px;
 }
 
 .Start-Form-Container{
@@ -461,8 +460,8 @@ background-color: #FFD993;
 margin-top: 100px;
 width:400px;
 height:800px;
- border-radius:25px;
- display: flex;
+border-radius:25px;
+display: flex;
 align-items:center;
 justify-content:center;
 flex-direction:column;
@@ -470,16 +469,16 @@ flex-direction:column;
     
 .Homepage-Container>h3{
 font-family: Arial, Helvetica, sans-serif;
+text-align: center;
 color: white;
 font-size: 40px;
-margin-bottom: 640px;
-text-align: center;
+margin-top: -150px;
 }
     
 .Counter-Container{
 background-color: #3FA347;
 outline: #000 solid 5px;
-margin-top: 100px;
+margin-top: 120px;
 width:150px;
 height:60px;
 border-radius:50px;
@@ -487,7 +486,7 @@ border-radius:50px;
     
 .Counter-Container>h2{
 position: absolute;
-top:100px;
+top:120px;
 padding-left: 27px;
 color:white;
 font-size:50px;
@@ -497,14 +496,15 @@ font-size:50px;
 font-family: Arial, Helvetica, sans-serif;
 font-size: 30px;
 position: absolute;
-top:63px;
+top:83px;
 padding-left: 30px;
 color:white;
 }
     
-.button5{
-margin-left: 320px;
-margin-bottom: -40px;
+#PlusButton{
+position: relative;
+left: 160px;
+bottom: -215px;
 background-color: green;
 width:50px;
 height:60px;
@@ -514,42 +514,46 @@ color:white;
 }
     
 .button6{
+position: relative;
+background-color:#F26419;
+color: white;
+left: -165px;
+bottom: -155px;
 width:50px;
 height:60px;
 font-size: 30px;
-margin-right: 320px;
-margin-bottom: 30px;
 }
     
 h5{
 font-family: Arial, Helvetica, sans-serif;
 position: absolute;
-top: 15px;
+top: 0px !important;
 left: 3px;
-font-size: 15px;
+margin-top: 50px;
+font-size: 20px !important;
 }
     
 #Logo1{
 position:absolute;
-top:15px;
-left:100px;
+top:-5px;
+left:133px;
 }
     
 .button7{
 background-color: #707070;
 color: white;
 position: absolute;
-top: 30px;
+top: 35px;
 right: 3px;
-width:80px;
+width:90px;
 height:40px;    
 }
     
 h6{
 font-family: Arial, Helvetica, sans-serif;
-font-size: 9px;
+font-size: 10px !important;
 position: absolute;
-top: -3px;
+top: 7px;
 right: 4.5px;
 }
     
@@ -565,5 +569,102 @@ position: absolute;
 top: 230px;
 right: 80px;
 }
+
+
+
+#modal1{
+background-color: #F6AE2D;
+border-radius: 50px;
+width:400px;
+height:400px;
+}
+
+
+    
+    
+h4{
+text-align: center;
+ color: white;
+}
+    
+span{
+color: black;
+font-size: 30px !important;
+}
+    
+.HabitPriority-Container{
+gap: 40px;
+}
+    
+    
+.button8{
+ width:350px;
+ height:70px;
+border-radius: 30px;
+}
+
+
+
+
+.Habit-1{
+width:370px;
+height:60px;
+border-radius: 30px;
+background-color: white;
+ margin-bottom: 20px;
+/* top:320px; 
+position:absolute; */
+}
+    
+    
+#CheckMark1{
+font-size: 30px;
+color: black;
+position:relative;
+padding-top: 100px;
+text-align: center;
+}
+    
+li span{
+position:relative;
+left: 110px;
+margin-top: 0px; 
+font-size: 30px; 
+}
+    
+    
+.fa-check{
+font-size: 30px;
+position:relative;
+top:-0px; 
+left:2px
+}
+    
+.Habit-1>p{
+font-size: 35px;
+position:relative;
+bottom:80px;
+left:30px;
+color: red;
+ }
+    
+.fa-xmark{
+font-size: 50px;
+position:relative; 
+bottom:165px;
+left:300px;
+}
+
+.button9{
+    position: relative;
+    left: 90px;
+    bottom: -20px;
+    width:200px;
+    height:50px;
+    font-size: 20px;
+    background-color: #707070;
+    color: white;
+    } 
+
     
 }
