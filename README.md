@@ -8,7 +8,7 @@ This project is called ‘habit tracker’ where users can track their habits.�
 
 In this project, users can add and choose a list of habits they want to complete.  
 
-Users can choose from three priorities low, medium, and high. These priorities have values such as. High-15, Medium-10 and Low=5. 
+Users can choose from three priorities low, medium, and high. These priorities have values such as. High=15, Medium=10 and Low=5. 
 
 The habit tracker will have tick boxes to check off when completed for each day. 
 
@@ -40,7 +40,7 @@ Users can look back at the previous habits they completed through the calendar.
 
         
 
-	    Notion Link: https://powerful-archduke-5dc.notion.site/DAT514-Full-Stack-Web-development-b44ecba19b8a4467842329f7ab8bae50 
+	Notion Link: https://powerful-archduke-5dc.notion.site/DAT514-Full-Stack-Web-development-b44ecba19b8a4467842329f7ab8bae50 
 
  ```
 
