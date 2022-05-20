@@ -32,15 +32,15 @@ Users can look back at the previous habits they completed through the calendar.
 
    ```   
 
-      GitHub Link: https://github.com/mkwawama/DAT514-Habit-Tracker.git 
+GitHub Link: https://github.com/mkwawama/DAT514-Habit-Tracker.git 
 
        
 
-       Deployed Application Link: http://34.89.3.25:8000/ 
+Deployed Application Link: http://34.89.3.25:8000/ 
 
         
 
-	Notion Link: https://powerful-archduke-5dc.notion.site/DAT514-Full-Stack-Web-development-b44ecba19b8a4467842329f7ab8bae50 
+Notion Link: https://powerful-archduke-5dc.notion.site/DAT514-Full-Stack-Web-development-b44ecba19b8a4467842329f7ab8bae50 
 
  ```
 
