@@ -14,7 +14,7 @@ The habit tracker will have tick boxes to check off when completed for each day.
 
 When a habit is completed the habit tracker will keep a score of your habits and calculate an average score for the week which will be shown on the right-hand side of the counter. 
 
-The habit tracker will also have a graph to show the last seven days scores. 
+The habit tracker will also have a graph to show the by  last seven days scores. 
 
 Users can look back at the previous habits they completed through the calendar. 
 
@@ -27,8 +27,9 @@ Users can look back at the previous habits they completed through the calendar.
 
    
 
-  The reason I give you these details is so you can see the previous amount of data from the past weeks using the calendar. You can also register as a new user. 
+The reason I give you these details is so you can see the previous amount of data from the past weeks using the calendar. You can also register as a new user. 
 
+The mobile resolution is 420px by 634px.
 
    ```   
 
