@@ -18,6 +18,7 @@ var priorities;
 var habits;
 var weekaveragescore;
 var thisDate;   //  from selected calendar date
+var graphData;   // for ploting graph of completed habits scores in the last 7 days
 
 var app = express();
 app.set("view engine", "ejs");
@@ -59,6 +60,7 @@ function getPriorities(){
 
 function weeklyScore() {	
 	var myhabits;	
+	var collectgraphData = [];
 	var date = new Date();
 	var yyyymmdd = date.toISOString().slice(0, 10);
 	date.setDate(date.getDate() - 7);  // last seven days
@@ -76,7 +78,9 @@ function weeklyScore() {
 							if (myhabits[i].habitid == habits[k]._id){									
 								if (myhabits[i].completed == 1)  {
 									dailysum = dailysum + parseInt(priorities[j].score);	// total week score for completed habits																														
-									
+									var str ='{"date":"'+myhabits[i].added_date.toISOString().slice(0, 10)+'","score":'+parseInt(priorities[j].score)+'}';
+                                     var strjson = JSON.parse(str);
+                                     collectgraphData.push(strjson); 
 								}
 							}
 						}																															
@@ -85,10 +89,32 @@ function weeklyScore() {
 		}
 		}	
 		weekaveragescore =  Math.ceil(dailysum/7);  // week average score rounded up to neatest integer
-		console.log(weekaveragescore);	
+		getDailyScore(collectgraphData);
+		
 	  });	  
 	  
 	}
+
+	function getDailyScore(data){  // function to get ech day score in the last seven days
+        var resMap = new Map();
+        var result = [];
+
+        data.map((x) => {
+                if (!resMap.has(x.date))
+                        resMap.set(x.date, x.score);
+                else
+                        resMap.set(x.date, (x.score + resMap.get(x.date)));  //sum al scores based on the key data
+        })
+        resMap.forEach((value, key) => {
+                result.push({
+                        y: value,
+                        label: key
+                })
+        })
+        graphData = result;
+        
+}
+
 
 //=====================
 // ROUTES
@@ -138,11 +164,11 @@ app.get("/homepage", isLoggedIn, function (req, res) {
 					}
 			}
 		}	
-		listhabits.dailysum = dailysum;	// dail sum of score
+		listhabits.dailysum = dailysum;	// daily sum of score
 		listhabits.weekaveragescore = weekaveragescore;	  // week average score
 		listhabits.today = today;  // today date
 		listhabits.score = dailysum+"|"+weekaveragescore;
-		res.render("homepage",{habits:habits,priorities:priorities,listhabits:listhabits,userData});  // pass these parametrs to homepage		
+		res.render("homepage",{habits:habits,priorities:priorities,listhabits:listhabits,userData,graphData});  // pass these parametrs to homepage		
 	  });	  
 
 	});
