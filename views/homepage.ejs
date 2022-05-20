@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habit Tracker</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <script src="https://kit.fontawesome.com/fa76d837d2.js" crossorigin="anonymous"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="js/graph.js"></script>
 
 <body>
     
@@ -18,29 +20,33 @@
         <img src="img/calendar.png" alt="Habit Tracker Logo" height="60" width="60"/>
        </div>
        <form action="/homepage" name="myDate" method="POST">
-         <input type="date" name="thisDate" id="myDate" value="<%= listhabits.today %>" onChange="this.form.submit()">
+         <input type="date" name="thisDate" id="myDate" value="<%= listhabits.today %>" onChange="this.form.submit()">    <!--Shows Today's Date on Calendar and submits from when chagned-->
       </form>
     
      <div class="Counter-Container">
-         <h3><b>Today</b></h3>
-        <h2><%=listhabits.score%></h2>
+        <h2><%=listhabits.score%></h2>    <!--Displays Habits Score on Counter-->
      </div>
     <div class="Homepage-Container">
         <h3><b>Start with a new habit today!</b></h3>
         
         <form action="/completehabit" method="POST">          
         <ul>
-          <% for (i=0;i<listhabits.length;i++){  %>
+          <% for (i=0;i<listhabits.length;i++){  %> <!--Displays List of habits-->
           <li class="Habit-1">           
           <label>
             
-            <% var dis =  ""; if (listhabits[i].completed == "1") { dis = "disabled";} %>
+            <% var dis =  ""; if (listhabits[i].completed == "1") { dis = "disabled";} %>  <!--Disables chekcbox when user completes habit-->
             <input type="checkbox" class="filled-in"  id="CheckMark1" name="habits" value="<%= listhabits[i].id %>" <%= dis %> />
-            <span style="font-size:50px"></spanstyle> <b><%= listhabits[i].habit %></b> </span> 
+            <span style="font-size:50px"></spanstyle> <b><%= listhabits[i].habit %></b> </span>  <!--Display list of habits in the homepage container-->
           </label>
         
         <p><b><%= listhabits[i].score %> </b></p>
+        <% if(listhabits[i].completed == "0") { %>   <!--Show X Icon when not complete-->
         <i class="fa-solid fa-xmark"></i>
+        <% }  %>
+        <% if(listhabits[i].completed == "1") { %>   <!--Show Tick Icon when complete-->
+          <i class="fa-solid fa-check"></i>
+          <% }  %>
          </li>
          <% }; %>
         </ul>
@@ -49,12 +55,12 @@
                 <% } %>
       </form>
         <button id="PlusButton" data-target="modal1" class="btn modal-trigger"> <i class="fa-light fa-plus"></i></button>
-        <button class="button6"><i class="fa-solid fa-chart-column"></i></button>
+        <button id="button6" data-target="modal2" class="btn modal-trigger">  <i class="fa-solid fa-chart-column"></i></button>
     </div>
-      <h6><b>Welcome <%= userData.fullname %></b></h6>
+      <h6><b> <%= userData.fullname %></b></h6>  <!--Dispaly full name of user on Welcome message-->
     <a href="/logout"><button class="button button7">Logout <i class="fa fa-sign-out"></i></button></a>
 
-    <!-- Modal Structure -->
+    <!-- Modal Structure Plus Habits -->
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4><b>Add Habit!</b></h4>
@@ -62,7 +68,7 @@
       <select class="browser-default" id="habits" name="habits">
         <option value="" disabled selected>Choose your Habits!</option>
        <% for (i=0;i<habits.length;i++){  %>
-          <option value="<%= habits[i]._id %>"> <%= habits[i].habit %> </option>
+          <option value="<%= habits[i]._id %>"> <%= habits[i].habit %> </option>   <!--Displays List of habits-->
         <% }; %>
        
       </select>
@@ -75,7 +81,7 @@
         <p>
           <label>
             <input name="priority" type="radio" value="<%= priorities[i]._id %>" />
-            <span><%= priorities[i].priority %> </span>
+            <span><%= priorities[i].priority %> </span>  <!--Displays List of priorities-->
           </label>
         </p>
         <% }; %>
@@ -84,16 +90,35 @@
       </form>
     </div>
   </div>
- <!-- Modal Trigger -->
- <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button> -->
+
+
+
+ <!-- Modal Structure Graph Habits -->
+ <div id="modal2" class="modal">
+  <div class="modal-content">
+    <h4><b>Habit Graph!</b></h4>
+    <div id="chartContainer"> </div>   <!-- for canvas graph -->
+        
+    <script> var data = '<%- JSON.stringify(graphData) %>'; if (data) plotBarChart(data); </script>
+  </div>
+</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    const box= document.querySelector(".modal")
-    M.Modal.init(box,{});
+    document.addEventListener('DOMContentLoaded', function() {  //Selelecting all Modals
+    const box= document.querySelector("#modal1")                //Tell Materialsize we using that Modal
+    M.Modal.init(box,{});                                       // Display Model on screen 
+                                                                  
   });
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {  //Selelecting all Modals
+  const box1= document.querySelector("#modal2")               //Tell Materialsize we using that Modal
+  M.Modal.init(box1,{});                                      // Display Model on screen 
+});
+</script>
+
 
 </body>
 </html>

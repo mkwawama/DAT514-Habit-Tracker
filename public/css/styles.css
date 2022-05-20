@@ -125,7 +125,7 @@ color: white;
 background-color: #FFD993;
 margin-top: 20px;
 width:1000px;
-height:500px;
+height:100%;
 border-radius:25px;
 display: flex;
 align-items:center;
@@ -152,8 +152,9 @@ border-radius:50px;
 .Counter-Container>h2{
 position: absolute;
 top:100px;
-padding-left: 27px;
+padding-left: 13px;
 color:white;
+font-size: 45px;
 }
 
 .Counter-Container>h3{
@@ -171,8 +172,6 @@ height:60px;
 border-radius: 30px;
 background-color: white;
 margin-bottom: 20px;
-/* top:320px; 
-position:absolute; */
 }
 
 
@@ -214,41 +213,47 @@ bottom:250px;
 left:780px;
 }
 
-
-
+.fa-check{
+font-size: 70px;
+position:relative; 
+top:-250px;
+left:775px;
+color: #3FA347;
+}
 
 
 #PlusButton{
 position: relative;
 left: 460px;
-bottom: 15px;
+bottom: -40px;
 background-color: green;
 width:50px;
-height:60px;
+height:50px;
 border-radius: 50%;
 font-size: 30px;
 color:white;
 }
 
 .fa-plus{
-font-size: 30px !important;
+font-size: 30px !important;  /* override ALL previous styling rules for that specific property on that element!*/
 padding-bottom: 2px;
 }
 
-.button6{
+#button6{
 position: relative;
 background-color:#F26419;
 color: white;
 right: 460px;
-bottom: 55px;
+bottom: 10px;
 width:50px;
-height:60px;
+height:50px;
 font-size: 30px;
+border-radius: 50%;
 }
 
 .button9{
 position: relative;
-left: 365px;
+left: 360px;
 bottom: -20px;
 width:200px;
 height:50px;
@@ -285,10 +290,10 @@ height:40px;
 
 h6{
 font-family: Arial, Helvetica, sans-serif;
-font-size: 13px !important;
+font-size: 13px !important;   /* override ALL previous styling rules for that specific property on that element!*/
 position: absolute; 
-top: 25px;
-right: 13px;
+top: 2px;
+right: 24px;
 }
 
 #myDate{
@@ -301,7 +306,7 @@ width: 200px;
 height: 40px;
 border-radius: 20px;
 position: absolute;
-top: 57px;
+top: 32px;
 right: 140px;
 }
 
@@ -327,10 +332,27 @@ gap: 40px;
 
 
 .button8{
-width:750px;
+width:100%;
 height:100px;
 border-radius: 30px;
 }
+
+#modal2{
+    background-color: #F6AE2D;
+    border-radius: 50px;
+    height: 800px;
+    width: 800px;
+}
+
+#chartContainer{
+  padding-left: 120px;
+  margin-top: 20px;
+  width: 100%;
+
+
+}
+
+
 
 
 
@@ -436,7 +458,7 @@ font-size: 45px
 }
 
 .Login-Form-Container>p{
-font-size: 100px !important;
+font-size: 100px !important; /* override ALL previous styling rules for that specific property on that element!*/
 }
     
 #Login{
@@ -459,7 +481,7 @@ color: white;
 background-color: #FFD993;
 margin-top: 100px;
 width:400px;
-height:800px;
+height:100%;
 border-radius:25px;
 display: flex;
 align-items:center;
@@ -472,7 +494,7 @@ font-family: Arial, Helvetica, sans-serif;
 text-align: center;
 color: white;
 font-size: 40px;
-margin-top: -150px;
+margin-top: 5px;
 }
     
 .Counter-Container{
@@ -486,10 +508,10 @@ border-radius:50px;
     
 .Counter-Container>h2{
 position: absolute;
-top:120px;
-padding-left: 27px;
+top:123px;
+padding-left: 10px;
 color:white;
-font-size:50px;
+font-size:45px;
 }
     
 .Counter-Container>h3{
@@ -504,33 +526,34 @@ color:white;
 #PlusButton{
 position: relative;
 left: 160px;
-bottom: -215px;
+top: 45px;
 background-color: green;
 width:50px;
-height:60px;
+height:50px;
 border-radius: 50%;
 font-size: 30px;
 color:white;
 }
     
-.button6{
+#button6{
 position: relative;
 background-color:#F26419;
 color: white;
 left: -165px;
-bottom: -155px;
+top: -5px;
 width:50px;
-height:60px;
+height:50px;
 font-size: 30px;
+border-radius: 25px;
 }
     
 h5{
 font-family: Arial, Helvetica, sans-serif;
 position: absolute;
-top: 0px !important;
+top: 0px !important;  /* override ALL previous styling rules for that specific property on that element!*/
 left: 3px;
 margin-top: 50px;
-font-size: 20px !important;
+font-size: 20px !important;  /* override ALL previous styling rules for that specific property on that element!*/
 }
     
 #Logo1{
@@ -551,10 +574,10 @@ height:40px;
     
 h6{
 font-family: Arial, Helvetica, sans-serif;
-font-size: 10px !important;
+font-size: 12px !important;  /* override ALL previous styling rules for that specific property on that element!*/
 position: absolute;
 top: 7px;
-right: 4.5px;
+right: 11px;
 }
     
 #myDate{
@@ -589,7 +612,7 @@ text-align: center;
     
 span{
 color: black;
-font-size: 30px !important;
+font-size: 30px !important; /* override ALL previous styling rules for that specific property on that element!*/
 }
     
 .HabitPriority-Container{
@@ -598,11 +621,10 @@ gap: 40px;
     
     
 .button8{
- width:350px;
- height:70px;
+width:100% !important;
+height:100% !important;
 border-radius: 30px;
 }
-
 
 
 
@@ -617,14 +639,7 @@ position:absolute; */
 }
     
     
-#CheckMark1{
-font-size: 30px;
-color: black;
-position:relative;
-padding-top: 100px;
-text-align: center;
-}
-    
+
 li span{
 position:relative;
 left: 110px;
@@ -633,12 +648,6 @@ font-size: 30px;
 }
     
     
-.fa-check{
-font-size: 30px;
-position:relative;
-top:-0px; 
-left:2px
-}
     
 .Habit-1>p{
 font-size: 35px;
@@ -666,5 +675,32 @@ left:300px;
     color: white;
     } 
 
-    
+#modal2{
+background-color: #F6AE2D;
+border-radius: 50px;
+height: 400px;
+width: 400px;
+}
+
+.fa-check{
+    font-size: 50px;
+    position:relative; 
+    top:-170px;
+    left:295px;
+    color: #3FA347;
+    }
+
+.modal >chartContainer{
+width: 100%;
+       
+ }
+
+ /* Setting Media Elements for 420px width */
+@media only screen and (max-width: 1290px) {
+
+.button8{
+    width:830px;
+    height:20px;
+    border-radius: 30px;
+
 }
